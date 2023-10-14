@@ -50,11 +50,8 @@ int main(){
 		}
 		printf("%d\n", numCar); 
 	}
-	for(auto it = parkTime.begin(); it != parkTime.end(); it++){
-		if(it->second == maxTime){
-			printf("%s ", it->first.c_str()); 
-		}
-	}
+	for(auto it = parkTime.begin(); it != parkTime.end(); it++)
+		if(it->second == maxTime) printf("%s ", it->first.c_str()); 
 	printf("%02d:%02d:%02d", maxTime/3600, maxTime%3600/60, maxTime%60 );
 	return 0;
 }
