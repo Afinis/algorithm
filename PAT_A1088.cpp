@@ -58,9 +58,10 @@ int main(){
 	outp(reduction(a)); printf(" + "); outp(reduction(b)); printf(" = "); outp(add(a,b)); printf("\n");
 	outp(reduction(a)); printf(" - "); outp(reduction(b)); printf(" = "); outp(minu(a,b)); printf("\n");
 	outp(reduction(a)); printf(" * "); outp(reduction(b)); printf(" = "); outp(mult(a,b)); printf("\n");
-	if(b.a==0)
+	if(b.a==0){
 		outp(reduction(a)); printf(" / "); outp(reduction(b)); printf(" = Inf");printf("\n");
-	else
+	}else{
 		outp(reduction(a)); printf(" / "); outp(reduction(b)); printf(" = "); outp(divid(a,b));printf("\n");
+	}	
 	return 0; 
 }
