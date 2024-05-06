@@ -13,6 +13,8 @@ int main(){
 		maxn = max(maxn, a[i]);
 		cnt[a[i]]++;
 	}
+	
+	// 两重循环和埃氏筛原理相同 
 	for(ll i = 1; i <= maxn; i++){
 		for(ll j = i; j <= maxn; j += i){
 			// f[i] 数据中是i的倍数的数的个数
@@ -23,6 +25,7 @@ int main(){
 			if(i==j) f[i]-=1, g[j]-=1;
 		}
 	}
+	
 	ll ans = 0;
 	// 所有的二元组 
 	for(ll i = 1; i <= maxn; i++){
